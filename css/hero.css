@@ -1,5 +1,5 @@
 .hero {
-  flex-grow: 1;  
+  flex-grow: 1;
   padding: 20px 0;
 }
 
@@ -15,6 +15,7 @@
   font-weight: 400;
   font-size: 312px;
   line-height: 113.461538%; /* 354/312 */
+  text-align: center;
   text-transform: uppercase;
   margin-bottom: 24px;
 }
@@ -32,4 +33,44 @@
 }
 
 .hero__steps {
+}
+
+/* Adaptive */
+@media (max-width: 1700px) {
+  .hero__title {
+    font-size: 150px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero__description {
+    font-size: 36px;
+    max-width: 770px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 118px;
+  }
+
+  .hero__description {
+    font-size: 26px;
+    max-width: 590px;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 86px;
+    margin-bottom: 8px;
+  }
+
+  .hero__description {
+    font-size: 18px;
+    max-width: 100%;
+    margin-bottom: 54px;
+  }
 }

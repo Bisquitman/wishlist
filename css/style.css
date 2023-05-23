@@ -97,3 +97,26 @@ fieldset {
   background-color: #365aba;
   border-color: #fff;
 }
+
+/* Adaptive */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 22px;
+  }
+
+  .btn {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 34px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+}

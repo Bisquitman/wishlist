@@ -10,3 +10,10 @@
 .nav__btn:last-child {
   margin-right: 0;
 }
+
+/* Adaptive */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
