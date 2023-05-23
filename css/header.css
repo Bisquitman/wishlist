@@ -1,0 +1,16 @@
+.header {
+  padding: 78px 0;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {}
+
+.header__nav {}
+
+.header__burger {}
+
