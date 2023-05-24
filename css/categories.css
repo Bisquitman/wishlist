@@ -1,0 +1,17 @@
+.categories__item {
+  margin-bottom: 80px;
+}
+
+.categories__item:last-child {
+  margin-bottom: 0;
+}
+
+.categories__title {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 118%; /* 59/50 */
+  margin-bottom: 38px;
+}
+.categories__title:last-child {
+  margin-bottom: 0;
+}

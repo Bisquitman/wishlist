@@ -15,3 +15,4 @@
 - [Макет Wish List](https://www.figma.com/file/AxM4tPHrjbkzy03ViU8Xsx/Wish_List-2.0-(intensive)?type=design&node-id=0%3A1&t=imlPwku2BJZKRqDs-1)
 - [Normalize](https://necolas.github.io/normalize.css/)
 - [Font Helper](https://gwfh.mranftl.com/fonts)
+- [ecsstractor](https://marketplace.visualstudio.com/items?itemName=diz.ecsstractor-port)

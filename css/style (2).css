@@ -98,11 +98,6 @@ fieldset {
   border-color: #fff;
 }
 
-.btn_castling {
-  color: #fff;
-  background-color: #365aba;
-}
-
 /* Adaptive */
 @media (max-width: 1024px) {
   .container {
