@@ -104,7 +104,17 @@ fieldset {
 }
 
 /* Adaptive */
-@media (max-width: 1024px) {
+@media (max-width: 1700px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  .btn {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1200px) {
   .container {
     padding: 0 22px;
   }
@@ -114,14 +124,14 @@ fieldset {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .container {
     padding: 0 34px;
   }
 }
-
+/*
 @media (max-width: 480px) {
   .container {
     padding: 0 16px;
   }
-}
+} */

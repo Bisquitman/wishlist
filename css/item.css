@@ -8,6 +8,13 @@
   text-align: center;
   border-radius: 15px;
   padding: 28px 35px 43px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s;
+}
+@media (any-hover: hover) {
+  .item:hover {
+    box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
+  }
 }
 
 .item__image {
@@ -28,4 +35,12 @@
   margin-bottom: 20px;
 }
 
-.item__btn {}
+.item__btn {
+}
+
+/** Adaptive */
+@media (max-width: 1700px) {
+  .item__image {
+    margin-bottom: 40px;
+  }
+}

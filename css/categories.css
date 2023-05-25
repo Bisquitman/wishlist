@@ -15,3 +15,14 @@
 .categories__title:last-child {
   margin-bottom: 0;
 }
+
+/** Adaptive */
+@media (max-width: 1700px) {
+  .categories__item {
+    margin-bottom: 84px;
+  }
+
+  .categories__title {
+    margin-bottom: 30px;
+  }
+}

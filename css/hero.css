@@ -38,16 +38,35 @@
 /* Adaptive */
 @media (max-width: 1700px) {
   .hero__title {
-    font-size: 150px;
+    font-size: 200px;
+    margin-bottom: 12px;
+  }
+
+  .hero__description {
+    font-size: 42px;
+    max-width: 860px;
+    margin-bottom: 66px;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+  .hero {
+    padding: 32px 0;
+  }
+
+  .hero__title {
+    font-size: 150px;
+    margin-bottom: 0;
+  }
+
   .hero__description {
     font-size: 36px;
     max-width: 770px;
     margin-bottom: 32px;
   }
+}
+
+@media (max-width: 1024px) {
 }
 
 @media (max-width: 768px) {

@@ -37,3 +37,34 @@
 .profile__edit svg {
   margin-right: 7px;
 }
+
+/** Adaptive */
+@media (max-width: 1700px) {
+  .profile {
+    align-items: center;
+  }
+
+  .profile__avatar {
+    max-width: 466px;
+    margin-right: 34px;
+  }
+
+  .profile__content {
+    gap: 12px;
+    padding-top: 17px;
+    padding-bottom: 0;
+  }
+
+  .profile__fullname {
+    margin-bottom: 0;
+  }
+
+  .profile__birthday {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+
+  .profile__edit svg {
+    margin-right: 2px;
+  }
+}
