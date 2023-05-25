@@ -32,11 +32,26 @@
   }
 
   .burger::after {
-    bottom: 0;
+    top: 100%;
+    transform: translateY(-100%);
   }
 
   .burger__line {
     top: calc(50% - 2px);
+  }
+
+  .burger.burger_active .burger__line {
+    opacity: 0;
+  }
+
+  .burger.burger_active::before {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+
+  .burger.burger_active::after {
+    top: 50%;
+    transform: rotate(-45deg);
   }
 }
 

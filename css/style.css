@@ -103,7 +103,7 @@ fieldset {
   background-color: #365aba;
 }
 
-/* Adaptive */
+/** Adaptive */
 @media (max-width: 1700px) {
   .container {
     padding: 0 32px;

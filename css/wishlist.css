@@ -42,3 +42,11 @@
     margin-bottom: 84px;
   }
 }
+
+@media (max-width: 992px) {
+  .wishlist {
+    padding-top: 36px;
+    padding-bottom: 142px;
+  }
+
+}
