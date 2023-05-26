@@ -25,15 +25,20 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  font-size: 38px;
 }
 
 .edit__label-avatar {
   display: flex;
   gap: 2px;
   align-items: center;
-  font-size: 38px;
   margin-bottom: 12px;
   cursor: pointer;
+}
+
+.edit__label-avatar svg {
+  width: 38px;
+  height: 38px;
 }
 
 .edit__input-file {
@@ -47,7 +52,11 @@
   display: flex;
   gap: 2px;
   align-items: center;
-  font-size: 38px;
+}
+
+.edit__avatar-delete svg {
+  width: 38px;
+  height: 38px;
 }
 
 .edit__name {
@@ -212,7 +221,7 @@
     max-width: 466px;
     margin-right: 34px;
   }
-  
+
   .edit__name {
     flex-direction: column;
     margin-bottom: 30px;
@@ -236,5 +245,51 @@
 
   .edit__submit-btn {
     margin-right: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .edit {
+    margin-bottom: 80px;
+  }
+
+  .edit__avatar {
+    margin-bottom: 64px;
+  }
+
+  .edit__avatar-image {
+    max-width: 340px;
+    margin-right: 25px;
+  }
+
+  .edit__avatar-load {
+    font-size: 24px;
+  }
+
+  .edit__label-avatar {
+    gap: 5px;
+    margin-bottom: 24px;
+  }
+
+  .edit__avatar-delete svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .edit__name {
+    gap: 44px;
+    margin-bottom: 44px;
+  }
+
+  .edit__birthdate {
+    margin-bottom: 44px;
+  }
+
+  .edit__description {
+    margin-bottom: 62px;
+  }
+
+  .edit_description-input {
+    min-height: 503px;
   }
 }

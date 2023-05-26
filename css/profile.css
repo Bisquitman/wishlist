@@ -32,6 +32,7 @@
   display: flex;
   align-items: center;
   font-size: 32px;
+  text-align: left;
 }
 
 .profile__edit svg {
@@ -39,7 +40,7 @@
 }
 
 /** Adaptive */
-@media (max-width: 1700px) {
+@media (max-width: 1200px) {
   .profile {
     align-items: center;
   }
@@ -66,5 +67,25 @@
 
   .profile__edit svg {
     margin-right: 2px;
+  }
+}
+
+@media (max-width: 992px) {
+  .profile__avatar {
+    max-width: 340px;
+    margin-right: 20px;
+  }
+
+  .profile__content {
+    padding-top: 0;
+  }
+
+  .profile__birthday {
+    margin-bottom: 12px;
+  }
+
+  .profile__edit svg {
+    width: 30px;
+    margin-right: 7px;
   }
 }

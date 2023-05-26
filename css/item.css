@@ -35,12 +35,19 @@
   margin-bottom: 20px;
 }
 
-.item__btn {
-}
-
 /** Adaptive */
 @media (max-width: 1700px) {
   .item__image {
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .item {
+    margin-bottom: 45px;
+  }
+
+  .item__image {
+    margin-bottom: 36px;
   }
 }

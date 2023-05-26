@@ -66,7 +66,10 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
   .hero__title {
     font-size: 118px;
   }
@@ -78,7 +81,7 @@
   }
 }
 
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
   .hero__title {
     font-size: 86px;
     margin-bottom: 8px;
@@ -89,4 +92,4 @@
     max-width: 100%;
     margin-bottom: 54px;
   }
-} */
+}

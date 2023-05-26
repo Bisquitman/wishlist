@@ -8,6 +8,7 @@
 
 .wishlist__description {
   font-size: 38px;
+  line-height: 118.75%; /* 38/32 */
   margin-bottom: 77px;
 }
 
@@ -17,9 +18,7 @@
   gap: 50px 40px;
 }
 
-.wishlist__item {
-}
-
+/** ========================================================================================================================================================
 /** Adaptive */
 @media (max-width: 1700px) {
   .wishlist__items {
@@ -49,4 +48,21 @@
     padding-bottom: 142px;
   }
 
+  .wishlist__profile {
+    margin-bottom: 64px;
+  }
+
+  .wishlist__description {
+    margin-bottom: 78px;
+  }
+
+  .wishlist__categories {
+    max-width: 544px;
+    margin: 0 auto;
+  }
+
+  .wishlist__items {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
 }
