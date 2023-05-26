@@ -40,10 +40,10 @@
   <main class="app" id="app">
     <section class="hero">
       <div class="container hero__container">
-        <h1 class="hero__title">Wish&shy;List</h1>
+        <h1 class="hero__title"><span>Wish</span><span>List</span></h1>
         <div class="hero__description">Никогда не&nbsp;поздно поставить новую цель или обрести новую мечту...</div>
         <ol class="hero__steps steps">
-          <li class="steps__item">создайте список желаний</li>
+          <li class="steps__item">Cоздайте список желаний</li>
           <li class="steps__item">Поделитесь ссылкой с&nbsp;друзьями</li>
           <li class="steps__item">Получите желанный подарок</li>
         </ol>
@@ -204,7 +204,7 @@
 
           <fieldset class="edit__description">
             <label class="edit__label-text" for="description">Вступительный текст:</label>
-            <textarea class="edit_description-input" name="description" id="description"></textarea>
+            <textarea class="edit__description-input" name="description" id="description"></textarea>
           </fieldset>
 
           <button class="edit__submit-btn btn">Сохранить изменения</button>
@@ -260,8 +260,10 @@
             </button>
           </fieldset>
 
-          <button class="edit__submit-btn btn">Сохранить изменения</button>
-          <button class="edit__delete-btn btn">Удалить желание</button>
+          <div class="edit__submit-wrapper">
+            <button class="edit__submit-btn btn">Сохранить изменения</button>
+            <button class="edit__delete-btn btn">Удалить желание</button>
+          </div>
         </form>
       </div>
     </section>

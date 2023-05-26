@@ -66,3 +66,25 @@
     gap: 34px;
   }
 }
+
+@media (max-width: 740px) {
+  .wishlist {
+    padding-top: 16px;
+    padding-bottom: 46px;
+  }
+
+  .wishlist__profile {
+    margin-bottom: 32px;
+  }
+
+  .wishlist__description {
+    text-align: center;
+    font-size: 16px;
+    max-width: 400px;
+    margin: 0 auto 42px;
+  }
+
+  .wishlist__items {
+    gap: 20px;
+  }
+}

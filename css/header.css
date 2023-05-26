@@ -14,7 +14,7 @@
 .header__burger {
 }
 
-/* Adaptive */
+/** Adaptive */
 @media (max-width: 1700px) {
   .header {
     padding: 48px 0;
@@ -47,7 +47,7 @@
     height: 59px;
   }
 }
-/* @media (max-width: 480px) {
+@media (max-width: 740px) {
   .header {
     padding: 16px 0;
   }
@@ -56,4 +56,4 @@
     width: 32px;
     height: 32px;
   }
-} */
+}
