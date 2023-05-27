@@ -32,9 +32,6 @@
   margin-bottom: 135px;
 }
 
-.hero__steps {
-}
-
 /** Adaptive */
 @media (max-width: 1700px) {
   .hero__title {

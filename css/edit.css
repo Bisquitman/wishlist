@@ -2,12 +2,6 @@
   padding-bottom: 174px;
 }
 
-.edit_profile {
-}
-
-.edit__form {
-}
-
 .edit__avatar {
   display: flex;
   align-items: center;
@@ -43,9 +37,6 @@
 
 .edit__input-file {
   display: none;
-}
-
-.edit__input-file_avatar {
 }
 
 .edit__avatar-delete {
@@ -150,9 +141,6 @@
   margin-right: 0;
 }
 
-.edit_wish {
-}
-
 .edit__wish {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -169,9 +157,6 @@
   align-items: flex-end;
   gap: 36px;
   max-width: 694px;
-}
-
-.edit__label-select {
 }
 
 .edit__select_currency {
@@ -206,9 +191,6 @@
   top: 8px;
   right: 8px;
   color: #365aba;
-}
-
-.edit__delete-btn {
 }
 
 /** Adaptive */

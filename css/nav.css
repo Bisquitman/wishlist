@@ -21,7 +21,7 @@
 @media (max-width: 992px) {
   .nav {
     position: absolute;
-    top: 130px;
+    top: calc(-100% - 140px);
     left: 0;
     right: 0;
     background-color: #365aba;
@@ -32,12 +32,13 @@
     align-items: center;
     justify-content: center;
     gap: 24px;
-    transform: translateY(calc(-100% - 130px));
-    transition: transform 0.5s ease-out;
+    /* transform: translateY(calc(-100% - 130px)); */
+    transition: top 0.5s ease-out;
+    z-index: -1;
   }
 
   .nav.nav_active {
-    transform: translateY(0);
+    top: 130px;
   }
 
   .nav__btn {
@@ -47,9 +48,12 @@
 
 @media (max-width: 740px) {
   .nav {
-    top: 60px;
     min-height: 290px;
     padding: 56px 20px;
-    transform: translateY(calc(-100% - 60px));
+    top: calc(-100% - 240px);
+  }
+
+  .nav.nav_active {
+    top: 60px;
   }
 }
