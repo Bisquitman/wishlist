@@ -18,6 +18,11 @@
   gap: 50px 40px;
 }
 
+.wishlist__no-wish {
+  font-size: 50px;
+  text-align: center;
+}
+
 /** ========================================================================================================================================================
 /** Adaptive */
 @media (max-width: 1700px) {
@@ -86,5 +91,9 @@
 
   .wishlist__items {
     gap: 20px;
+  }
+
+  .wishlist__no-wish {
+    font-size: 40px;
   }
 }

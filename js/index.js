@@ -1,8 +1,9 @@
 import { JWT_TOKEN_KEY } from './const.js';
 import { createHero } from './createHero.js';
 import { createWishlist } from './createWishlist.js';
-import { getLogin } from './getLogin.js';
+import { getLogin } from './serviceAPI.js';
 import { renderNavigation } from './renderNavigation.js';
+import { createEditProfile } from './createEditProfile.js';
 
 export const router = Router();
 const token = localStorage.getItem(JWT_TOKEN_KEY);
@@ -12,7 +13,12 @@ const app = document.getElementById('app');
 
 const handleEditPageRoute = (id) => {};
 
-const handleEditProfileRoute = (login) => {};
+const handleEditProfileRoute = async (login) => {
+  app.textContent = '';
+  const { sectionEditProfile, formProfile } = await createEditProfile(login);
+  renderNavigation('profile', formProfile);
+  app.append(sectionEditProfile);
+};
 
 const handleUserRoute = async (login) => {
   app.textContent = '';
@@ -38,7 +44,7 @@ const init = () => {
   router.init();
 
   if (isMainPage) {
-    isMainPage = !isMainPage;
+    isMainPage = false;
 
     if (auth.login) {
       router.setRoute(`/user/${auth.login}`);

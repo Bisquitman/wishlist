@@ -15,4 +15,175 @@
   background-color: #fff;
   color: #282828;
   margin: auto;
+  border-radius: 25px;
+  padding: 74px 116px 188px;
+  max-width: 1000px;
+}
+
+.modal__title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 64px;
+  margin-bottom: 48px;
+}
+
+.modal__description {
+  text-align: center;
+  font-weight: 300;
+  font-size: 41px;
+  margin-bottom: 40px;
+}
+
+.modal__field {
+  margin-bottom: 66px;
+}
+
+.modal__label {
+  display: block;
+  margin-bottom: 32px;
+}
+.modal__label:last-child {
+  margin-bottom: 0;
+}
+
+.modal__input {
+  display: block;
+  font-size: 48px;
+  width: 100%;
+  padding: 32px 36px;
+  background-color: #ffffff;
+  border: 3px solid #365aba;
+  border-radius: 15px;
+}
+
+.modal__btn {
+  width: 100%;
+  background-color: #365aba;
+  color: #fff;
+  font-weight: 400;
+  font-size: 59px;
+  text-transform: capitalize;
+  padding: 20px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 34px;
+  right: 34px;
+  cursor: pointer;
+  outline: 2px solid transparent;
+  border-radius: 12px;
+}
+
+.modal__close:focus {
+  outline-color: #365aba;
+}
+
+.modal__close:focus-visible {
+  outline-color: #282828;
+}
+
+/** Adaptive */
+@media (max-width: 1200px) {
+  .modal__main {
+    max-width: 700px;
+    padding: 102px 40px 138px;
+  }
+
+  .modal__title {
+    font-size: 50px;
+    margin-bottom: 40px;
+  }
+  
+  .modal__description {
+    font-size: 34px;
+    margin-bottom: 52px;
+  }
+
+  .modal__field {
+    margin-bottom: 74px;
+  }
+
+  .modal__label {
+    margin-bottom: 24px;
+  }
+
+  .modal__btn {
+    font-size: 48px;
+  }
+
+  .modal__close {
+    top: 28px;
+    right: 28px;
+  }
+}
+
+@media (max-width: 992px) {
+  .modal__main {
+    max-width: 600px;
+    padding: 102px 40px;
+  }
+
+  .modal__description {
+    margin-bottom: 56px;
+  }
+
+  .modal__field {
+    margin-bottom: 62px;
+  }
+
+  .modal__input {
+    font-size: 32px;
+  }
+
+  .modal__btn {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 740px) {
+  .modal {
+    padding: 10px;
+  }
+
+  .modal__main {
+    max-width: 100%;
+    padding: 70px 16px 42px;
+    border-radius: 15px;
+  }
+
+  .modal__title {
+    font-size: 36px;
+    margin-bottom: 14px;
+  }
+
+  .modal__description {
+    font-size: 18px;
+    margin-bottom: 17px;
+  }
+
+  .modal__field {
+    margin-bottom: 18px;
+  }
+
+  .modal__label {
+    margin-bottom: 12px;
+  }
+
+  .modal__input {
+    font-size: 24px;
+    padding: 16px 20px;
+  }
+
+  .modal__btn {
+    font-size: 24px;
+    padding: 20px 15px;
+  }
+
+  .modal__close {
+    top: 16px;
+    right: 16px;
+    width: 34px;
+    height: 34px;
+  }
 }

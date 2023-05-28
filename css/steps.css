@@ -11,6 +11,7 @@
   flex-basis: 243px;
   font-size: 18px;
   line-height: 116.666667%; /* 21/18 */
+  min-height: 92px;
 }
 
 .steps__item::before {
@@ -48,6 +49,7 @@
   .steps__item {
     flex-basis: auto;
     text-align: center;
+    min-height: 40px;
   }
 
   .steps__item::before {

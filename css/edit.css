@@ -78,9 +78,12 @@
 }
 
 .edit__birthdate {
+  margin-bottom: 44px;
+}
+
+.edit__birthdate-wrapper {
   display: flex;
   gap: 12px;
-  margin-bottom: 44px;
 }
 
 .edit__label_select {
