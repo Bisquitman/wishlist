@@ -90,7 +90,7 @@ export const createSelectDate = (
   }
 
   if (birthdate) {
-    const [day, month, year] = birthdate.split('/');
+    const [month, day, year] = birthdate.split('/');
     selectDay.value = day;
     selectMonth.value = month;
     selectYear.value = year;

@@ -27,20 +27,20 @@ export const createWishlist = async (pageLogin) => {
     className: 'wishlist__profile profile',
   });
 
+  const fullname =
+    user.name || user.surname
+      ? `${user.name || ''} ${user.surname || ''}`.trim()
+      : user.login;
+
   const avatar = createElement('img', {
     className: 'profile__avatar',
-    src: `img/avatar.png`,
-    alt: `фото Иван Петьров`,
+    src: `${API_URI}/${user.avatar}`,
+    alt: `фото ${fullname}`,
   });
 
   const content = createElement('div', {
     className: 'profile__content',
   });
-
-  const fullname =
-    user.name || user.surname
-      ? `${user.name || ''} ${user.surname || ''}`.trim()
-      : user.login;
 
   const title = createElement('h2', {
     className: 'profile__fullname',
@@ -51,14 +51,25 @@ export const createWishlist = async (pageLogin) => {
 
   if (user.birthdate) {
     const birthday = new Date(user.birthdate); // полная дата рождения, получаем из базы
-    const day = birthday.getDate(); // число из др
-    const month = birthday.toLocaleString('default', { month: 'long' }); // месяц из др
+    // const day = birthday.getDate(); // число из др
+    // const month = birthday.toLocaleString('default', { month: 'long' }); // месяц из др
+    const dayAndMonth = birthday.toLocaleString('default', {
+      month: 'long',
+      day: 'numeric',
+    });
+    const dayAndMonthNow = Date.now().toLocaleString('default', {
+      month: 'long',
+      day: 'numeric',
+    });
     const ageDiffMs = Date.now() - birthday.getTime(); // текущее время в мс - дата рождения в мс (от 01.01.1970 00:00:00)
     const ageDate = new Date(ageDiffMs); // возраст от 1970 года
     const age = Math.abs(ageDate.getUTCFullYear() - 1970); // возраст на текущий момент с учётом текущей даты (был др в этом году или ещё нет)
-    const plural = pluralizeYears(age);
+    const plural = pluralizeYears(dayAndMonthNow < dayAndMonth ? age : age + 1);
 
-    const ageMessage = `${day} ${month} исполнится ${age} ${plural}`;
+    // const ageMessage = `${day} ${month} исполнится ${age} ${plural}`;
+    const ageMessage = `${dayAndMonth} исполнится ${
+      dayAndMonthNow < dayAndMonth ? age : age + 1
+    } ${plural}`;
 
     const birthdayElem = createElement('p', {
       className: 'profile__birthday',
