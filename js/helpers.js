@@ -22,7 +22,22 @@ export const pluralizeYears = (age) => {
   }
 };
 
-export const handleImageFileSelection = (input, image) => {};
+export const handleImageFileSelection = (inputFile, image, inputHidden) => {
+  const handleFileInputChange = (e) => {
+    if (e.target.files.length > 0) {
+      const file = e.target.files[0];
+      const reader = new FileReader();
+      reader.addEventListener('load', () => {
+        image.src = reader.result;
+        inputHidden.value = reader.result;
+      });
+
+      reader.readAsDataURL(file);
+    }
+  };
+
+  inputFile.addEventListener('change', handleFileInputChange);
+};
 
 export const createSelectDate = (
   selectDay,

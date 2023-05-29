@@ -61,7 +61,12 @@ export const createEditProfile = async (login) => {
     accept: 'image/jpeg, image/png',
   });
 
-  handleImageFileSelection(editAvatarInput, editAvatarImage);
+  const editHiddenInput = createElement('input', {
+    type: 'hidden',
+    name: 'avatar'
+  });
+
+  handleImageFileSelection(editAvatarInput, editAvatarImage, editHiddenInput);
 
   const btnDeleteAvatar = createElement('button', {
     className: 'edit__avatar-delete',
