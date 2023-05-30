@@ -19,3 +19,6 @@
 - [Director](https://github.com/flatiron/director)
 - [API serverWishList](https://fs01.getcourse.ru/fileservice/file/download/a/251231/sc/156/h/25db4f46090b9feb5c195bd8c5035498.zip) 
 (для сервера надо установить библиотеки через ```npm i```)
+- [API](https://github.com/maksim-leskin/server-wish) github
+- [Glitch](https://glitch.com/) хостинг для API
+- [Vercel](https://vercel.com/) хостинг для проекта

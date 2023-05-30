@@ -145,18 +145,29 @@ export const createWishlist = async (pageLogin) => {
 
         const itemImage = createElement('img', {
           className: 'item__image',
-          src: `${API_URI}/${item.img}`,
+          src: `${API_URI}/${item.image}`,
           alt: item.title,
         });
 
         const itemTitle = createElement('h4', {
           className: 'item__title',
-          textContent: item.title,
         });
+
+        if (item.link) {
+          const itemLink = createElement('a', {
+            className: 'item__link',
+            href: item.link,
+            textContent: item.title,
+            target: '_blank',
+          });
+          itemTitle.append(itemLink);
+        } else {
+          itemTitle.textContent = item.title;
+        }
 
         const itemPrice = createElement('div', {
           className: 'item__price',
-          innerHTML: `${item.price}&nbsp;${item.currency}`,
+          innerHTML: item.price && `${item.price}&nbsp;${item.currency}`,
         });
 
         itemElem.append(itemImage, itemTitle, itemPrice);
