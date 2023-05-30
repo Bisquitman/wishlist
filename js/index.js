@@ -4,6 +4,7 @@ import { createWishlist } from './createWishlist.js';
 import { getLogin } from './serviceAPI.js';
 import { renderNavigation } from './renderNavigation.js';
 import { createEditProfile } from './createEditProfile.js';
+import { createEditWish } from './createEditWish.js';
 
 let isMainPage = true;
 
@@ -13,8 +14,13 @@ export const auth = token ? await getLogin(token) : {};
 
 const app = document.getElementById('app');
 
-const handleEditPageRoute = (id) => {
+const handleEditPageRoute = async (id) => {
   isMainPage = false;
+  app.textContent = '';
+
+  const { sectionEditWish, formWish } = await createEditWish(id);
+  renderNavigation('wish', formWish);
+  app.append(sectionEditWish);
 };
 
 const handleEditProfileRoute = async (login) => {
@@ -44,7 +50,6 @@ const handleHomePage = () => {
 
 const init = () => {
   router.on('/', handleHomePage);
-  router.on('/editwish/newwish', handleEditPageRoute);
   router.on('/editwish/:id', handleEditPageRoute);
   router.on('/editprofile/:login', handleEditProfileRoute);
   router.on('/user/:login', handleUserRoute);

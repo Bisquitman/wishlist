@@ -29,7 +29,10 @@ export const handleImageFileSelection = (inputFile, image, inputHidden) => {
       const reader = new FileReader();
       reader.addEventListener('load', () => {
         image.src = reader.result;
-        inputHidden.value = reader.result;
+
+        if (inputHidden) {
+          inputHidden.value = reader.result;
+        }
       });
 
       reader.readAsDataURL(file);
@@ -46,9 +49,10 @@ export const createSelectDate = (
   birthdate,
 ) => {
   for (let day = 0; day <= 31; day++) {
-    const option = document.createElement('option');
-    option.value = day ? day : '';
-    option.text = day ? day : '';
+    const option = createElement('option', {
+      value: day ? day : '',
+      text: day ? day : '',
+    });
     selectDay.append(option);
   }
 
@@ -69,23 +73,26 @@ export const createSelectDate = (
   ];
 
   for (let i = 0; i < months.length; i++) {
-    const option = document.createElement('option');
-    option.value = i;
-    option.text = months[i];
+    const option = createElement('option', {
+      value: i,
+      text: months[i],
+    });
     selectMonth.append(option);
   }
 
   const currentYear = new Date().getFullYear();
 
-  const optionYear = document.createElement('option');
-  optionYear.value = '';
-  optionYear.text = '';
+  const optionYear = createElement('option', {
+    value: '',
+    text: '',
+  });
   selectYear.append(optionYear);
 
   for (let year = currentYear; year >= currentYear - 200; year--) {
-    const option = document.createElement('option');
-    option.value = year;
-    option.text = year;
+    const option = createElement('option', {
+      value: year,
+      text: year,
+    });
     selectYear.append(option);
   }
 
@@ -101,4 +108,16 @@ export const createSelectDate = (
       currentTarget.blur();
     });
   });
+};
+
+export const createOptionsCurrency = (select) => {
+  const currencies = ['RUB', 'BYN', 'KZT', 'USD', 'EUR', 'GBP'];
+
+  for (let i = 0; i < currencies.length; i++) {
+    const option = createElement('option', {
+      value: currencies[i],
+      text: currencies[i],
+    });
+    select.append(option);
+  }
 };
