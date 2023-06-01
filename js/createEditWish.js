@@ -207,17 +207,21 @@ export const createEditWish = async (id) => {
     type: 'submit',
   });
 
-  const btnDeleteWish = createElement('button', {
-    className: 'edit__delete-btn btn',
-    textContent: 'Удалить желание',
-    type: 'button',
-  });
-  btnDeleteWish.addEventListener('click', async (e) => {
-    await deleteWish(id);
-    history.back();
-  });
+  editSubmitWrapper.append(btnSaveWish);
 
-  editSubmitWrapper.append(btnSaveWish, btnDeleteWish);
+  if (wishData) {
+    const btnDeleteWish = createElement('button', {
+      className: 'edit__delete-btn btn',
+      textContent: 'Удалить желание',
+      type: 'button',
+    });
+    btnDeleteWish.addEventListener('click', async (e) => {
+      await deleteWish(id);
+      history.back();
+    });
+
+    editSubmitWrapper.append(btnDeleteWish);
+  }
 
   formWish.append(editWish, editWishPhoto, editSubmitWrapper);
 
